@@ -150,6 +150,8 @@ When a material blocker to the active obligation is established, surface it prom
 - what the blocker prevents;
 - whether an already-authorized valid alternative is known.
 
+If a material blocker, repeated failure, or material inefficiency could materially weaken a route selected by an active governing method, return that evidence to the method for route re-evaluation before non-trivial workaround search; if that method is InnoSkeptic, this reopens candidate comparison.
+
 If an already-authorized Root-relevant route with meaningful expected gain is known, follow it under the proper authority.
 
 If the validity of an alternative route is unclear, run only a bounded Probe sufficient to establish whether it is Root-relevant, within held authority or properly returnable to its exact owner, and has meaningful expected gain relative to its cost. The Probe does not authorize solving the alternative subject.
