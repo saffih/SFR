@@ -16,16 +16,20 @@ Formal invocation:
 
 Explicit equivalents include `use SFR`, `use SFR for <task or continuation instruction>`, `continue under SFR`, and `execute this under SFR`.
 
+A workstream may continue in a fresh semantic invocation only when that invocation is explicitly instructed or validly bound by the governing environment to continue under SFR and can recover the Root/DONE, active Frame and existing parent/return links sufficient to reconstruct the exact open Frame chain, current valid focus, compact state, blockers, parked material issues, and required references from durable continuation material. Do not infer SFR continuation merely because an external agent, model, process, session, executor, or other execution binding relates the new invocation to prior work.
+
 On invocation or recovery:
 
 1. Read this exact current SFR runtime artifact as selected by the governing environment.
-2. Bind the best current Root obligation/DONE, current valid focus, compact current state, blockers, parked material issues, and any decision-relevant route or continuation reference.
+2. Bind the best current Root obligation/DONE, active Frame and existing parent/return links, current valid focus, compact current state, blockers, parked material issues, and any decision-relevant route or continuation reference.
 3. Recover the real frontier from authoritative sources, durable continuation material, evidence, and observable state when the session has drifted or become confused.
 4. Treat handoffs and summaries as navigation/continuation material rather than authority over the sources they reference.
 5. Preserve established completed work unless new evidence materially invalidates what its acceptance depended on.
 6. If no valid current focus can be established, do not invent one. Return the smallest unresolved focus/route question to its exact owner, or expose the actual blocker when no valid resolving action remains.
 
 SFR does not choose reasoning methods, tools, agents, or other capabilities. Those may operate naturally inside the current focus under their own authority.
+
+SFR identity is semantic rather than tied to an external execution realization. Changing an agent, model, process, session, executor, or equivalent execution binding alone does not change Root, Frame, focus, Child/parent, or return state, and changing semantic state does not itself require an execution change.
 
 ## Core model
 
@@ -64,6 +68,8 @@ Current state is rewritten from present relevance rather than appended as histor
 Keep raw logs, large evidence bodies, detailed Child work, rejected alternatives, resolved uncertainty, and recoverable chronology outside active state unless their consequence remains material.
 
 Compaction must preserve claim strength, tested scope, uncertainty, contradiction, and negative-claim limits.
+
+Refresh compact control state when current focus materially advances, a blocker changes, a Child opens or returns, a route or governing scope changes, or Close is evaluated. Do not rewrite SFR state after every ordinary action merely to prove activity.
 
 ## Current-focus rule
 
@@ -194,15 +200,29 @@ When the governing environment activates a stronger composition contract, follow
 
 When work crosses a real invocation, delegation, resumption, or handoff boundary, follow the governing environment's context rules when present while preserving Root, current-focus, and return semantics.
 
+Before a known boundary where the SFR workstream is expected to continue in another semantic invocation, refresh the minimum durable semantic frontier the receiver will need: Root/DONE, active Frame and existing parent/return links sufficient to reconstruct the exact open Frame chain, current valid focus, compact current state, blockers, parked material issues, and required references. Let the governing context/execution layer transport that material; do not create a second SFR continuation store, separate stack registry, or copy execution lifecycle state into SFR merely to cross the boundary.
+
+SFR does not own or require external execution identity or lifecycle state. An external composition may maintain that state and expose only the minimum opaque continuation or binding reference needed at the SFR boundary; SFR may preserve or surface that reference when required but does not interpret it or make it part of Frame identity, focus, authority, or evidence.
+
 A Child Frame is a semantic scope. It is not proof of fresh context, isolation, delegation, or a separate process.
 
 SFR does not claim to reclaim consumed context, know hidden remaining capacity, or infer unobservable context/isolation properties.
+
+### Boundary examples — illustrative only
+
+These examples apply the rules above; they add no SFR state, authority, transition, or exception.
+
+- **Same Frame, new executor:** Frame F1 remains active when executor A refreshes the durable frontier and exits, then executor B explicitly continues under SFR and recovers F1. Executor succession is not Frame progression.
+- **New Child, same executor:** while F1 remains pending, the same executor may open Child F2 for a substantial material side obligation. The active Frame changes to F2 because semantic attention changed, not because execution changed.
+- **Nested Child across executor change:** with F1 → F2 → F3 open and F3 active, a fresh executor that explicitly continues under SFR recovers F3 plus the existing F3 → F2 → F1 return links. Process exit is not semantic Return.
+- **Same task, no SFR continuation:** a fresh executor that receives the same task or related external context but no valid SFR activation/binding or recoverable semantic frontier must not claim that the prior SFR workstream resumed. Execution correlation is not semantic continuation.
 
 ## Close
 
 Before claiming terminal completion, compare observable reality against Root DONE and check:
 - required integration;
 - required validation;
+- unresolved open Child work;
 - unresolved blockers;
 - parked items whose materiality may have changed;
 - whether local success is being mistaken for Root completion.
@@ -218,7 +238,7 @@ At a material pause, recovery point, blocker, or user status request, be able to
 - current blocker, if any;
 - parked material issues, if any;
 - next valid action;
-- when a Child is active: that Child's bounded DONE and parent return point;
+- when one or more Children are open: the active Child's bounded DONE plus enough existing parent/return links to recover exact nested return order;
 - any continuation reference required by an activated external contract.
 
 During sustained work, surface a concise progress signal at a natural substantive boundary when more substantive work remains and the user has not otherwise received meaningful visibility. Also surface a material change in interpretation, route, blocker, or next action before substantial dependent continuation when user feedback could affect the route.

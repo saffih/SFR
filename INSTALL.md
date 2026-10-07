@@ -41,3 +41,5 @@ SFR: continue the current design work until the open issue is resolved
 ```
 
 SFR maintains the session focus; it does not require a separate planning or reasoning framework.
+
+For integrations that deliberately continue one SFR workstream in a fresh agent, model, process, or session, have the departing invocation refresh the runtime-defined durable semantic frontier and have the receiver explicitly `continue under SFR` (or bind it equivalently under the governing environment). Merely launching the next executor is not SFR continuation.
