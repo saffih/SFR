@@ -207,6 +207,10 @@ SFR does not claim to reclaim consumed context, know hidden remaining capacity, 
 
 ## Status
 
+During sustained active work, preserve human steerability when the environment permits incremental user-visible communication. At a natural substantive-work boundary, if more substantive work remains and the user has not otherwise received meaningful visibility into that work, surface a concise progress signal before continuing. Also surface a material change in interpretation, route, blocker, or next action before substantial dependent continuation when user feedback could affect the route.
+
+A progress signal normally states only the active obligation, what materially changed since the prior signal or that nothing material changed, decision-relevant uncertainty or blocker when useful, and the next action. Do not emit a tool transcript, hidden reasoning trace, repetitive heartbeat, or new SFR checkpoint merely to prove activity. Progress signaling is derived communication only and creates no new SFR state, timer, tool-count schedule, planning authority, or completion authority.
+
 At a material pause, recovery point, blocker, or user status request, be able to state concisely:
 
 - Root DONE
