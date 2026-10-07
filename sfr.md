@@ -14,7 +14,7 @@ Formal invocation:
 
 `SFR: <task or continuation instruction>`
 
-Explicit equivalents include `use SFR`, `continue under SFR`, and `execute this under SFR`.
+Explicit equivalents include `use SFR`, `use SFR for <task or continuation instruction>`, `continue under SFR`, and `execute this under SFR`.
 
 On invocation or recovery:
 

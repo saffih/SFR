@@ -6,6 +6,24 @@ SFR is a lightweight semantic-attention runtime for substantial AI work.
 
 Its job is simple: keep work attached to the Root obligation while attention changes, so necessary reasoning can move elsewhere and return without accidental drift.
 
+## Install
+
+For one-time setup, open `INSTALL.md` and paste its installation instruction into your assistant.
+
+After installation, use SFR naturally:
+
+```text
+use SFR for investigate why this deployment keeps failing and fix it
+```
+
+or:
+
+```text
+SFR: continue the current design work until the open issue is resolved
+```
+
+A bare `SFR` or `use SFR` applies SFR to the current active task when one can be validly established.
+
 ## Minimal core
 
 SFR keeps:
@@ -23,18 +41,11 @@ Reasoning methods, planning systems, tools, agents, and other capabilities remai
 
 This lets SFR work alongside methods such as DesignSkeptic while keeping separation of concerns: the method owns semantic reasoning and SFR owns attention continuity.
 
-## Use
+## Runtime
 
-Give an AI system the complete `sfr.md` runtime and invoke it explicitly, for example:
+`sfr.md` is the current SFR runtime and semantic authority distributed by this repository.
 
-- `SFR: <task or continuation instruction>`
-- `use SFR`
-- `continue under SFR`
-- `execute this under SFR`
-
-## Authority
-
-`sfr.md` is the SFR runtime and semantic authority distributed by this repository. This README is orientation only.
+`INSTALL.md` installs only a binding to the current runtime. It does not replace or copy SFR authority.
 
 The canonical development source is maintained in Hartal and synchronized one-way into this repository. The external repository does not silently become upstream authority.
 
