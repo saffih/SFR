@@ -2,26 +2,41 @@
 
 **Original author:** Saffi Hartal
 
-SFR is a lightweight execution-focus runtime for substantial AI work. It keeps execution attached to the root obligation while allowing necessary interruption, bounded child work, replanning, blocker handling, and exact return to the parent task.
+SFR is a lightweight semantic-attention runtime for substantial AI work.
 
-## Runtime
+Its job is simple: keep work attached to the Root obligation while attention changes, so necessary reasoning can move elsewhere and return without accidental drift.
 
-`sfr.md` is the complete standalone SFR runtime.
+## Minimal core
 
-Use it by supplying the exact current runtime to the AI environment and invoking one of:
+SFR keeps:
+
+- the Root obligation / DONE;
+- exactly one current focus per active frame;
+- bounded Child attention departures;
+- Park / Probe for side issues;
+- material return upward;
+- **Integrate -> Return -> Reconsider**;
+- Resume only when the saved return point is still valid;
+- route/blocker discipline and Root Close.
+
+Reasoning methods, planning systems, tools, agents, and other capabilities remain external. They may operate naturally inside the current focus or supply the next valid focus under their own authority; SFR does not need to know their internals.
+
+This lets SFR work alongside methods such as DesignSkeptic while keeping separation of concerns: the method owns semantic reasoning and SFR owns attention continuity.
+
+## Use
+
+Give an AI system the complete `sfr.md` runtime and invoke it explicitly, for example:
 
 - `SFR: <task or continuation instruction>`
 - `use SFR`
 - `continue under SFR`
-- `execute this plan under SFR`
+- `execute this under SFR`
 
-SFR is intentionally small. It does not require DesignSkeptic, Skeptic, WELL, TP, or Hartal-specific repository paths for standalone use.
+## Authority
 
-## Publication model
+`sfr.md` is the SFR runtime and semantic authority distributed by this repository. This README is orientation only.
 
-This repository is a distribution view of the canonical SFR runtime maintained in Hartal development. Publication is one-way into this repository; external repository state does not silently become source authority.
-
-The synchronized source surface is intentionally limited to `sfr.md`. This README and the repository license are maintained at the destination.
+The canonical development source is maintained in Hartal and synchronized one-way into this repository. The external repository does not silently become upstream authority.
 
 ## License
 
