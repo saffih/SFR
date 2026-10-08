@@ -6,6 +6,8 @@
 
 SFR is a lightweight semantic attention runtime. It is not a planner, reasoning framework, task graph, workflow engine, or context-isolation mechanism.
 
+For clarity alongside other methods, an SFR **Frame** may also be called an **Attention Frame**. This is only a name: it adds no Frame type, state, transition, or authority.
+
 SFR owns Root/focus continuity, bounded attention departure, semantic return, route recovery, and Root closure only. User, task, environment, safety, verification, planning, method, tool, and other governing authority remain external.
 
 ## Invocation
