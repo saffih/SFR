@@ -8,9 +8,12 @@ Its job is simple: keep work attached to the Root obligation while attention cha
 
 ## Install
 
-For one-time setup, open `INSTALL.md` and paste its installation instruction into your assistant.
+Choose **one** installation mode (both use the same `sfr.md` runtime):
 
-After installation, use SFR naturally:
+- **[Explicit SFR](INSTALL.md)** — invoke SFR by typing `SFR:` or `use SFR`.
+- **[SFR Auto](INSTALL-AUTO.md)** — opt in to automatic SFR activation for meaningful goals, substantive research, and other nontrivial tasks. Say `no SFR` or `disable SFR` to stop it in the current chat; `enable SFR` to resume. Install the standing instruction in a host-supported persistent instruction location to use it in future chats.
+
+For explicit mode, use SFR naturally:
 
 ```text
 use SFR for investigate why this deployment keeps failing and fix it
@@ -45,7 +48,7 @@ This lets SFR work alongside methods such as DesignSkeptic while keeping separat
 
 `sfr.md` is the current SFR runtime and semantic authority distributed by this repository.
 
-`INSTALL.md` installs only a binding to the current runtime. It does not replace or copy SFR authority.
+`INSTALL.md` and `INSTALL-AUTO.md` are alternative activation bindings to the current runtime, not copies or competing runtime authority. Auto behavior depends on the assistant actually receiving and honoring the installed user instruction; it is not a platform-level always-on switch.
 
 The canonical development source is maintained in Hartal and synchronized one-way into this repository. The external repository does not silently become upstream authority.
 
