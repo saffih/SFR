@@ -43,7 +43,3 @@ SFR: continue the current design work until the open issue is resolved
 SFR maintains the session focus; it does not require a separate planning or reasoning framework.
 
 For integrations that deliberately continue one SFR workstream in a fresh agent, model, process, or session, have the departing invocation refresh the runtime-defined durable semantic frontier and have the receiver explicitly `continue under SFR` (or bind it equivalently under the governing environment). Merely launching the next executor is not SFR continuation.
-
-## Optional automatic mode
-
-If you want SFR to start automatically for meaningful goals and nontrivial research, use [Install SFR Auto](sfr-install-auto.md) **instead of** this explicit-only installation binding. It includes `no SFR`, `stop SFR`, and `disable SFR` controls. Both modes use the same current `sfr.md` runtime. Remove or replace the older installation instruction when switching modes; do not stack contradictory standing activation rules.
