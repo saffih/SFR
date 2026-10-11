@@ -5,33 +5,20 @@
 Paste the complete instruction below into a **persistent, highest-applicable user-controlled instruction location**, such as an assistant's global custom instructions or its agent instruction file. Follow the host's normal installation mechanism. This text is an activation binding, not a background service, executable hook, or guarantee that a platform will remember it.
 
 ```text
-Install SFR Auto as a standing user instruction in every chat where these instructions are actually active.
-
-When I present a meaningful goal, target, problem, research question, decision, project, or other nontrivial work to accomplish, automatically invoke SFR for that work even if I did not write "SFR". Examples include substantive research, investigation, analysis, troubleshooting, design, coding, planning, drafting, comparison, and multi-step execution. Treat the user's real goal and completion condition as the Root/DONE; establish the current valid focus from the request and available evidence. Use normal judgment about what is nontrivial rather than requiring a keyword, a fixed length, or multiple steps.
-
-Do not auto-start SFR for greetings, casual conversation, or isolated trivial requests with no substantial ongoing goal. Merely mentioning or asking casually about the word "SFR" is not itself an activation trigger. If a substantive task is already under SFR, ordinary follow-ups continue that same work; do not create a new Root or reread the runtime for every message. A new, unrelated user-directed goal may establish a new Root rather than becoming an artificial Child of the old goal.
+SFR Auto ON in chats receiving this instruction. Invoke for substantial goals, research, investigations, decisions, design, implementation, planning, or nontrivial questions without "SFR". Skip greetings, simple facts and incidental mentions. For ordinary follow-ups, keep the active Root; unrelated goals start new Roots. Bind Root/DONE to my actual goal; do not invent work.
 
 On the first actual SFR activation in each conversation, and after explicit re-enablement, read and follow the CURRENT public SFR runtime:
 https://github.com/saffih/SFR/blob/main/sfr.md
+This opt-in controls WHEN; runtime controls HOW, despite its standalone "explicit-invocation only" default. No extra ceremony.
 
-Keep its read content and Git blob SHA in the conversation context where available. This is a session reuse hint, not a second authoritative runtime or a persistent cache. During ordinary follow-ups to an active Root, reuse the already-read runtime without refetching it for each message.
+For the same Root reuse the read runtime. Before a new, unrelated Root, verify current Git blob SHA; reread if changed, lost, or unverifiable. Fresh authoritative read suffices without SHA. Respect stricter source rules of other methods.
 
-Before starting a new, unrelated Root in the same conversation, verify the current runtime's blob SHA against the cached identity. Reuse the cached content only if the SHA is unchanged and that content remains available; otherwise freshly read the current runtime. Also reread when a relevant source change is known, cached content or its provenance is lost, or an explicit re-enable occurs. A remembered SHA without a fresh current-source comparison does not prove currentness. If Git SHA is unavailable but the current authoritative source itself can be read, use that fresh read rather than blocking solely for lack of SHA.
+"No SFR"/"SFR off": OFF this chat until re-enabled. "no SFR for this task": OFF only this task. "SFR on"/"enable SFR"/"use SFR"/"SFR: ...": ON. Explicit overrides govern their scope. Disable globally by removing this instruction.
 
-The runtime governs SFR semantics; this user-installed Auto binding only selects when to invoke it. It is an explicit opt-in instruction to the host, not a claim that the SFR runtime independently auto-invokes. Never replace stricter per-invocation source requirements of another skill or governing authority with this SFR-specific reuse rule. Respect all higher-priority user, environment, safety, tool, and task rules. Apply SFR quietly during ordinary work, without extra checklists, progress ceremonies, or status reports that the runtime does not require.
-
-Commands, when addressed to the assistant as instructions rather than quoted or discussed:
-- "no SFR", "stop SFR", "disable SFR", or "SFR off": turn SFR OFF for the current chat from this point forward. Do not infer that the actual task is complete; do not destroy an existing task's evidence or fabricate a closing result. While OFF, do not auto-reactivate for later nontrivial messages in this chat.
-- "no SFR for this task": leave SFR OFF for this task only; the next distinct substantive task may auto-start SFR.
-- "enable SFR", "resume SFR", "SFR on", or an explicit "SFR: ..." instruction: turn SFR ON again in the current chat and follow the current runtime. Continue any previous Root only if its exact semantic frontier can actually be recovered; otherwise establish the valid new Root or expose the gap.
-- "disable SFR Auto globally" or "uninstall SFR Auto": stop using this standing binding wherever the user can remove or replace it. If you cannot edit that persistent instruction location, tell me how to remove it; never claim that a global setting changed.
-
-The default of this installation is AUTO-ON in each new chat that receives this instruction; per-chat OFF does not silently alter future chats. An explicit user command always overrides the automatic default for its stated scope. If the user explicitly requires SFR for a task, do not suppress it solely because that task would otherwise be trivial.
-
-Auto-activation starts attention management, not automatic continuation of a different conversation. Never treat a shared topic, old chat, model/process correlation, or apparent prior context as proof that a previous SFR Root resumed. Cross-invocation continuation requires the runtime's valid activation/binding AND a recoverable durable semantic frontier with Root/DONE, current focus, active Frame and parent/return links when applicable. Expose insufficient evidence instead of guessing.
-
-If you cannot access and read the current sfr.md when required, say so and do not claim SFR compliance; assist normally where possible. Do not invent a background trigger, tool access, persistence guarantee, or state store.
+Never treat a shared topic, old chat, or executor as proof of cross-chat resumption. Require valid SFR binding and recoverable Root/DONE, focus, active Frame and parent/return links, blockers and references. If source is unavailable, disclose and do not claim compliance.
 ```
+
+The copyable instruction is designed to fit ChatGPT's 1,500-character Free/Go limit (and the 5,000-character limit on paid plans). If the field already contains other instructions, the **combined** length must fit. Do not delete unrelated user instructions without permission. Copying text or publishing this file does not itself enable SFR globally; save it in the host's persistent Custom Instructions and test activation in a fresh chat. Static tests cannot prove host behavior.
 
 ## Use
 
