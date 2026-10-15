@@ -134,6 +134,8 @@ When Child or bounded interruption work finishes:
 7. Resume the saved parent return point only when reconsideration leaves it valid.
 8. Otherwise follow the valid successor focus, revise the route within held authority, return the decision to its owner, or Close as appropriate.
 
+At a material Return or reconsideration, distinguish the bounded result from its actual effect on Root DONE, the active blocker, and the next valid focus. Repeated intermediate successes that leave a Root-relevant obligation unchanged are evidence to reconsider the focus or route before more preparatory work; they do not by themselves invalidate justified inquiry or authorize a new route.
+
 Return is not automatic Resume. Exact memory of an old frontier never outranks newer established meaning.
 
 The purpose of a Child is to protect and inform its parent, not to become the new mission.
