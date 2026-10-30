@@ -16,6 +16,7 @@ Observe only decision-relevant boundaries that actually occur:
 - **Generated handoff:** handoff prompt created for the same workstream versus a distinct bounded delegate; current frontier and receiver activation instructions.
 - **Receiver continuation:** a *separate real invocation* receives an unedited handoff and independently binds its source, Root, active Frame/return chain, completed work and first valid action.
 - **Contradiction or miss:** drift, stale or invalid source, lost activation, wrong return, repeated settled work, unjustified Close, or excessive tracking burden.
+- **Human visibility (when sampled):** for substantial starts/recoveries, did the user receive a correct compact Root/Frame-path/focus/next-action orientation? For material work and Frame changes, were the actual action, reason, finding and consequence communicated without redundant tool-by-tool narration? Inspect the user-visible record, not an assistant's claim of having communicated. Score **communication sufficiency separately from semantic SFR correctness**; a polished status display alone is not proof that the correct frontier was maintained.
 
 Do not insert observation checkpoints into every message or use tracking to create an SFR Child. No sampling or automation is implied for workstreams/chats the observer cannot actually access. When an observation opportunity occurs but logging is unavailable, keep work moving; give a compact optional observation only where it is useful and truthful.
 
