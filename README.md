@@ -6,23 +6,20 @@ SFR is a lightweight semantic-attention runtime for substantial AI work.
 
 Its job is simple: keep work attached to the Root obligation while attention changes, so necessary reasoning can move elsewhere and return without accidental drift.
 
-## Install
+## Install — choose an activation mode
 
-For one-time setup, open `INSTALL.md` and paste its installation instruction into your assistant.
+SFR has **one runtime**, [`sfr.md`](sfr.md), and two optional ways to activate it. Choose **one** in each persistent instruction scope; do not stack conflicting activation bindings.
 
-After installation, use SFR naturally:
+- **Explicit activation:** [`INSTALL.md`](INSTALL.md) — install once, then request `SFR: <task>`, `use SFR`, or `use SFR for <task>` when needed.
+- **Automatic activation:** [`INSTALL-AUTO.md`](INSTALL-AUTO.md) — copy its instruction block into your assistant's persistent user-controlled instructions. It invokes SFR automatically for substantial tasks without an `SFR:` prefix, but skips greetings and simple queries.
 
-```text
-use SFR for investigate why this deployment keeps failing and fix it
-```
+For ChatGPT, use the available **Custom Instructions** field. If an explicit-only SFR instruction already occupies that scope, **replace** it with Auto rather than adding a second competing rule. Keep other unrelated instructions unchanged. Save the setting and test with a new chat; the document alone does not install anything.
 
-or:
+**Auto controls:** `no SFR` turns Auto off for the current chat; `no SFR for this task` suppresses one task; `enable SFR` turns it back on. To disable Auto across future chats, remove its standing instruction from the host's settings. A chat-local toggle does not change other chats.
 
-```text
-SFR: continue the current design work until the open issue is resolved
-```
+These are instruction bindings, **not** native triggers, background services, or guarantees of cross-chat continuity. Each actual activation must bind the current runtime, and cross-chat continuation still requires a recoverable SFR frontier.
 
-A bare `SFR` or `use SFR` applies SFR to the current active task when one can be validly established.
+For workspace/account-specific installation and verification, see [`INSTALL-BINDINGS.md`](INSTALL-BINDINGS.md) and [`ACCOUNT.md`](ACCOUNT.md).
 
 ## Minimal core
 
