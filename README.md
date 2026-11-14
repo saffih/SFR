@@ -2,7 +2,7 @@
 
 **Original author:** Saffi Hartal
 
-SFR is a lightweight semantic-attention runtime for substantial AI work.
+SFR is a lightweight attention-continuity runtime for substantial AI work.
 
 Its job is simple: keep work attached to the Root obligation while attention changes, so necessary reasoning can move elsewhere and return without accidental drift.
 
@@ -29,10 +29,12 @@ SFR keeps:
 - exactly one current focus per active frame;
 - bounded Child attention departures;
 - Park / Probe for side issues;
-- material return upward;
-- **Integrate -> Return -> Reconsider**;
+- material Child Return, including unresolved blockers without false DONE;
+- **Return → Interpret → Integrate → Reconsider**;
 - Resume only when the saved return point is still valid;
 - route/blocker discipline and Root Close.
+
+**Observability is ON by default** while SFR is active, using bounded checks at meaningful transitions. Optional observation can be turned off for the stated scope; a tracker, persistent logging, or independent reviewer is not required. Required verification remains required.
 
 Reasoning methods, planning systems, tools, agents, and other capabilities remain external. They may operate naturally inside the current focus or supply the next valid focus under their own authority; SFR does not need to know their internals.
 
@@ -40,7 +42,7 @@ This lets SFR work alongside methods such as DesignSkeptic while keeping separat
 
 ## Runtime
 
-`sfr.md` is the current SFR runtime and semantic authority distributed by this repository.
+`sfr.md` is the current maintained SFR runtime and semantic authority distributed by this repository. Maintained status does not establish independently verified cross-host or cross-invocation reliability.
 
 `INSTALL.md` installs only a binding to the current runtime. It does not replace or copy SFR authority.
 

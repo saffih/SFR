@@ -1,17 +1,17 @@
-# SFR Observability Profile — optional
+# SFR Observability Profile — default when available
 
-**Status:** Optional, public, standalone companion to [SFR](sfr.md). **Not** a second SFR runtime, activation rule, persistence engine, account integration, or requirement for using SFR.
+**Status:** Optional companion, **selected by default when SFR is active and this profile is accessible and authorized**. Not a second runtime, activation rule, persistence engine, account integration, or prerequisite for using SFR.
 
 ## Purpose and boundary
 
-Observe whether an explicitly activated SFR workstream preserves its actual Root, current focus, bounded Child/parent return semantics and continuity across real handoffs during ordinary work. Distinguish model assertions, document-level inspection, scripted examples, and independently observed receiver behavior.
+Observe whether an actually activated SFR workstream preserves its actual Root, current focus, bounded Child/parent return semantics and continuity across real handoffs during ordinary work. Distinguish model assertions, document-level inspection, scripted examples, and independently observed receiver behavior.
 
-This profile defines **what to observe and how to label evidence**. The SFR runtime alone remains sufficient for standalone SFR use and retains all semantic authority for attention and return. This profile neither grants tools or account permissions nor changes Root DONE, action authorization, the current focus, or SFR activation. Use only when separately selected by the user or an authorized environment instruction. Do **not** load it merely because SFR is mentioned.
+This profile defines **what to observe and how to label evidence**. The SFR runtime alone remains sufficient for standalone SFR use and retains all semantic authority for attention and return. This profile neither grants tools or account permissions nor changes Root DONE, action authorization, the current focus, or SFR activation. Apply it by default only to an actually activated SFR workstream when accessible and authorized; an explicit opt-out may disable optional observation for its stated scope. Do **not** activate SFR or load this profile merely because SFR is mentioned. Companion absence does not disable the SFR core or justify a claim of observed behavior.
 
 ## Sampling: nearly invisible in normal work
 
 Observe only decision-relevant boundaries that actually occur:
-- **Activation/recovery:** explicit SFR invocation and actual source binding; initial Root, DONE, active Frame and focus recoverable.
+- **Activation/recovery:** valid SFR activation (explicit request or authorized host binding) and actual source binding; initial Root, DONE, active Frame and focus recoverable.
 - **Material transition:** focus supersession, Child opening, Child return, blocker/route revision, or claimed Root Close.
 - **Generated handoff:** handoff prompt created for the same workstream versus a distinct bounded delegate; current frontier and receiver activation instructions.
 - **Receiver continuation:** a *separate real invocation* receives an unedited handoff and independently binds its source, Root, active Frame/return chain, completed work and first valid action.
@@ -43,11 +43,11 @@ The observation record is **evidence**, not the semantic SFR frontier or source 
 
 ## Optional private log and account guidance
 
-For everyday ChatGPT use, keep a privately controlled durable event table (for example a Google Sheet), with the fields above, and expose its exact authorized reference to an observing assistant only if needed. An observing assistant may append only with tool access and appropriate user authorization; verify the written row by readback before claiming it persisted. Failed or ambiguous writes remain `WRITE_UNVERIFIED`. Deduplicate by event ID; do not reconstruct past unobserved events from memory.
+If persistent logging is separately chosen and authorized, use a privately controlled event table (for example a Google Sheet), with the fields above; expose its reference to an observing assistant only when needed and authorized. Default observation does not require creating a tracker or writing events. An observing assistant may append only with tool access and appropriate user authorization; verify the written row by readback before claiming it persisted. Failed or ambiguous writes remain `WRITE_UNVERIFIED`. Deduplicate by event ID; do not reconstruct past unobserved events from memory.
 
-An optional ChatGPT Custom Instruction may say:
+A supplementary ChatGPT Custom Instruction may say:
 
-> When I explicitly use SFR, consult the current SFR source and, if accessible and authorized, its optional Observability Profile. At material transitions or handoffs, check Root/DONE, active Frame, current focus, Child returns, handoff activation, source identity and the first justified next action. Distinguish OBSERVED_PASS, OBSERVED_FAIL and UNVERIFIED; do not infer independent success from a simulation. Log minimal evidence to my private tracker only when connected, permitted and readback-verified. Never auto-activate SFR in unrelated work or interrupt normal work for per-message tracking.
+> When SFR is actually active, consult the current SFR source and, if accessible and authorized, its default-on Observability Profile. At material transitions or handoffs, check Root/DONE, active Frame, current focus, Child returns, handoff activation, source identity and the first justified next action. Distinguish OBSERVED_PASS, OBSERVED_FAIL and UNVERIFIED; do not infer independent success from a simulation. Log minimal evidence to my private tracker only when connected, permitted and readback-verified. Never auto-activate SFR in unrelated work or interrupt normal work for per-message tracking.
 
 Account Memory is a preference/retrieval aid, **not** an event store, cross-chat monitor, or guarantee that every SFR chat will be visited. ChatGPT Custom Instructions can supply a general preference, but cannot guarantee access to other chats or automatic writes. Neither this public profile nor account guidance may claim always-on surveillance, hidden invocation identities, or inherited state without evidence.
 

@@ -9,7 +9,7 @@ SFR Auto ON in chats receiving this instruction. Invoke for substantial goals, r
 
 On the first actual SFR activation in each conversation, and after explicit re-enablement, read and follow the CURRENT public SFR runtime:
 https://github.com/saffih/SFR/blob/main/sfr.md
-This opt-in controls WHEN; runtime controls HOW, despite its standalone "explicit-invocation only" default. No extra ceremony.
+This opt-in controls WHEN; runtime controls HOW. This authorized binding enables scoped Auto activation; no extra ceremony.
 
 For the same Root reuse read runtime. Before a new, unrelated Root, verify current Git blob SHA; reread if changed, lost, or unverifiable. Fresh source read suffices without SHA. Respect stricter source rules of other methods.
 

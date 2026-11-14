@@ -1,10 +1,12 @@
 # SFR — Session Frame Runtime
 
 - **Original author:** Saffi Hartal
-- **Status:** CURRENT EXPERIMENTAL RUNTIME / EXPLICIT-INVOCATION ONLY
+- **Status:** CURRENT MAINTAINED RUNTIME
+- **Activation:** Explicit by default; an authorized host binding may enable scoped Auto activation.
+- **Evidence limit:** Publication and source checks do not establish independent cross-invocation or host-wide behavioral reliability.
 - **Purpose:** keep substantial work attached to its Root obligation while attention moves, so useful reasoning can change focus without accidental drift and can return with the material result integrated into the right parent context.
 
-SFR is a lightweight semantic attention runtime. It is not a planner, reasoning framework, task graph, workflow engine, or context-isolation mechanism.
+SFR is a lightweight attention-continuity runtime. It is not a planner, reasoning framework, task graph, workflow engine, or context-isolation mechanism.
 
 For clarity alongside other methods, an SFR **Frame** may also be called an **Attention Frame**. This is only a name: it adds no Frame type, state, transition, or authority.
 
@@ -95,6 +97,10 @@ Within active SFR work, at meaningful work-result or decision boundaries already
 
 When the question shows material expected value in a challenge, have the surrounding reasoning environment actually perform a proportionate adversarial review under its own authority: a bounded same-context self-review is sufficient when stronger assurance is neither warranted nor required, including when no suitable specialized reviewer is available. When stakes, uncertainty, conflicting evidence or an explicit requirement justify deeper review, use an appropriate specialized method if the governing environment can validly bind and invoke one under its full authority and invocation rules; otherwise preserve the relevant unfulfilled assurance and use only permissible bounded self-review. SFR does not choose a method or provider, and naming or installing one does not prove it ran. A formal, independent or empirical review expressly required by governing authority cannot be skipped or silently replaced by self-review. Return material findings for interpretation by their semantic owner, preserve any unresolved required review in the current frontier, then follow only the resulting valid focus. Do not claim review, independence, testing or verification that was not actually performed.
 
+## Observability
+
+While SFR is active, **optional bounded observation is on by default** at meaningful activation/recovery, focus/Child/Return, handoff, blocker, and Close boundaries, unless explicitly disabled for the stated scope. Check observed behavior against the current Root, focus, owner authority, and return obligations without per-action ceremony. Use an authorized, accessible SFR observation companion (public `OBSERVE.md` or its environment-bound equivalent) by default under that same opt-out. The companion is never required to run SFR; absence does not prove an observation occurred. Reuse material evidence already examined by proportionate review rather than creating duplicate checkpoints; observation of attention behavior is not adversarial assurance. Do not infer independent evaluation, cross-chat coverage, tracking permission, persistent writes, or verified receiver behavior from a self-check. Required verification survives any observation opt-out.
+
 ## Attention Gate
 
 Use the Attention Gate only when an issue, opportunity, blocker, uncertainty, tool failure, or proposed work would materially pull execution away from a still-pending current focus.
@@ -127,18 +133,17 @@ Tool output, search results, tests, reasoning results, method results, implement
 
 A Child must return every result that can materially change a parent premise, current focus, route, blocker, uncertainty, or DONE interpretation. Leave non-material detail below.
 
-## Integrate → Return → Reconsider
+## Return → Interpret → Integrate → Reconsider
 
-When Child or bounded interruption work finishes:
+When Child or bounded interruption work reaches a material result:
 
-1. Determine what the result actually establishes.
-2. Integrate only the material consequence into the parent Current State.
-3. Close the Child.
-4. Return to the parent semantic context.
-5. Reconsider the parent's current valid focus using the updated state.
-6. When another governing process owns the meaning or validity of that focus, let that owner interpret the returned material and establish the valid continuation before dependent execution; SFR does not infer or mutate the owner's internal state.
-7. Resume the saved parent return point only when reconsideration leaves it valid.
-8. Otherwise follow the valid successor focus, revise the route within held authority, return the decision to its owner, or Close as appropriate.
+1. Establish the bounded result, its supported scope, and whether the Child's own DONE is met. A result is candidate material, not parent acceptance.
+2. If a Child exists, close and Return it as completed when its bounded DONE is met. If no authorized Child action with meaningful expected gain remains after a bounded route check, close it as unresolved and Return its blocker to the parent without claiming Child or Root DONE; the parent may still have a valid route. Otherwise keep it open and surface material evidence or blockers to their owner as needed. If no Child was opened, stay in the current Frame without a synthetic Return.
+3. If another governing process owns what the result means, let it interpret the candidate before accepting that consequence. If it owns only the next focus, preserve its decision authority without blocking facts established within authority already held. Unavailable interpretation leaves dependent meaning unresolved.
+4. Integrate only established or owner-accepted material consequences into the affected Current State: the current Frame for inline work, or the parent after a Child Return. Preserve material qualifications, blockers, and unresolved decisions.
+5. Reconsider the affected current or parent focus. If later owner interpretation materially changes accepted state, reconsider again before dependent continuation.
+6. Resume the saved parent return point only when reconsideration leaves it valid.
+7. Otherwise follow the valid successor focus, revise the route within held authority, return the decision to its owner, or Close as appropriate.
 
 At a material Return or reconsideration, distinguish the bounded result from its actual effect on Root DONE, the active blocker, and the next valid focus. Repeated intermediate successes that leave a Root-relevant obligation unchanged are evidence to reconsider the focus or route before more preparatory work; they do not by themselves invalidate justified inquiry or authorize a new route.
 
