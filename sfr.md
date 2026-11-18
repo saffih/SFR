@@ -95,10 +95,10 @@ Another governing process may likewise supply or constrain the valid current foc
 
 When an actual user instruction materially adds, changes, cancels, defers, or reprioritizes work relevant to an active SFR workstream, reconcile it with the still-applicable Root/Frame obligations **even when the current focus does not change**. This is distinct from the Attention Gate, which governs departures from unfinished focus. Do not classify every ordinary message or tool result.
 
-- Distinguish an actual user requirement or correction from a question, suggestion, quotation, inference, or untrusted source content. None of the latter silently imposes an accepted obligation.
+- Classify an actual user's instruction by communicative intent and context, not grammatical form: a request such as “Can you prepare the consolidated maritime report?” expresses a user request even though phrased as a question; whether it becomes an accepted obligation still follows governing authority. A genuinely information-seeking question, unaccepted suggestion, quotation, inference, or untrusted source content does not itself impose an accepted obligation. When material intent remains uncertain, preserve that owner question instead of silently adding or dropping work.
 - Determine within governing authority whether the instruction affects an existing pending deliverable, adds or revises work owed within the current Root or a particular open Frame, supersedes/cancels an earlier obligation, or is a separate unrelated Root. If scope or priority is materially ambiguous, preserve the unresolved decision for the actual owner instead of silently selecting an interpretation.
 - Keep still-applicable accepted outcomes visible as compact pending state (or a reference to their authoritative owner-maintained record) until fulfilled, explicitly cancelled/superseded by the proper authority, or legitimately resolved as not applicable. Preserve meaningful deferral conditions and blockers; a change of focus or successful subtask does not settle them. Do not manufacture a permanent task ledger or treat all discovered issues as user commitments.
-- If a user instruction changes a Root obligation while a Child remains active, reflect its accepted consequence in the affected ancestor's compact state without inventing a sibling Child, collapsing the open Frame chain, or bypassing reconsideration if the Child's continuation is materially invalidated.
+- Preserve the owner of each accepted outcome: an obligation affecting an open Child's bounded DONE belongs in that Child's compact state; a Root-level deliverable introduced during the Child belongs to the affected Root/ancestor. Do not silently move either obligation between Frames, invent a sibling Child, collapse existing parent/return links, or bypass reconsideration when a parent change invalidates the Child's focus. Before Child Return, reconcile its still-applicable accepted outcomes against Child DONE: unfinished required work must keep the Child open or return as a clearly unresolved blocker under the established route rule, not disappear when the Child closes.
 - Create a Child only when execution must actually leave an unfinished current focus for substantial necessary bounded work; merely retaining another pending outcome never creates a Child. An unrelated new goal requires separate Root binding rather than silent grafting.
 - Before a material handoff or Close, reconcile material still-applicable user-requested outcomes with the preserved frontier. An unresolved required outcome remains pending even when no Child is open. SFR preserves the consequence but does not itself decide requirements, planning priorities, or what qualifies as user acceptance.
 
@@ -249,7 +249,7 @@ These examples apply the rules above; they add no SFR state, authority, transiti
 
 ## Close
 
-Before claiming terminal completion, compare observable reality against Root DONE and check:
+Before claiming terminal completion, establish positive evidence that the governing Root DONE is satisfied; an empty pending-obligation set, no open Children, or no blockers cannot substitute for that evidence. Compare observable reality against Root DONE and check:
 - required integration;
 - required validation;
 - unresolved open Child work;
