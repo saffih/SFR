@@ -98,7 +98,7 @@ When an actual user instruction materially adds, changes, cancels, defers, or re
 - Classify an actual user's instruction by communicative intent and context, not grammatical form: a request such as “Can you prepare the consolidated maritime report?” expresses a user request even though phrased as a question; whether it becomes an accepted obligation still follows governing authority. A genuinely information-seeking question, unaccepted suggestion, quotation, inference, or untrusted source content does not itself impose an accepted obligation. When material intent remains uncertain, preserve that owner question instead of silently adding or dropping work.
 - Determine within governing authority whether the instruction affects an existing pending deliverable, adds or revises work owed within the current Root or a particular open Frame, supersedes/cancels an earlier obligation, or is a separate unrelated Root. If scope or priority is materially ambiguous, preserve the unresolved decision for the actual owner instead of silently selecting an interpretation.
 - Keep still-applicable accepted outcomes visible as compact pending state (or a reference to their authoritative owner-maintained record) until fulfilled, explicitly cancelled/superseded by the proper authority, or legitimately resolved as not applicable. Preserve meaningful deferral conditions and blockers; a change of focus or successful subtask does not settle them. Do not manufacture a permanent task ledger or treat all discovered issues as user commitments.
-- Preserve the owner of each accepted outcome: an obligation affecting an open Child's bounded DONE belongs in that Child's compact state; a Root-level deliverable introduced during the Child belongs to the affected Root/ancestor. Do not silently move either obligation between Frames, invent a sibling Child, collapse existing parent/return links, or bypass reconsideration when a parent change invalidates the Child's focus. Before Child Return, reconcile its still-applicable accepted outcomes against Child DONE: unfinished required work must keep the Child open or return as a clearly unresolved blocker under the established route rule, not disappear when the Child closes.
+- Preserve the owner of each accepted outcome: an obligation affecting an open Child's bounded DONE belongs in that Child's compact state; a Root-level deliverable introduced during the Child belongs to the affected Root/ancestor. Do not silently move either obligation between Frames, invent a sibling Child, collapse existing parent/return links, or bypass reconsideration when a parent change invalidates the Child's focus. Before Child Return, reconcile its still-applicable accepted outcomes against Child DONE: unfinished required work must keep the Child open or return as a clearly unresolved blocker under the established route rule, unless governing authority explicitly defers it. On such deferral, retain the unfinished bounded obligation, dependencies, owner, and resumption condition in the affected parent/ancestor's compact state or governing owner's record, not disappear when the Child closes.
 - Create a Child only when execution must actually leave an unfinished current focus for substantial necessary bounded work; merely retaining another pending outcome never creates a Child. An unrelated new goal requires separate Root binding rather than silent grafting.
 - Before a material handoff or Close, reconcile material still-applicable user-requested outcomes with the preserved frontier. An unresolved required outcome remains pending even when no Child is open. SFR preserves the consequence but does not itself decide requirements, planning priorities, or what qualifies as user acceptance.
 
@@ -148,14 +148,19 @@ A Child must return every result that can materially change a parent premise, cu
 
 ## Return → Interpret → Integrate → Reconsider
 
-When Child or bounded interruption work reaches a material result:
+When Child or bounded interruption work reaches a material result, or governing authority explicitly redirects attention away from an unfinished Child:
 
-1. Establish the bounded result, its supported scope, and whether the Child's own DONE is met. A result is candidate material, not parent acceptance.
-2. If a Child exists, close and Return it as completed when its bounded DONE is met. If no authorized Child action with meaningful expected gain remains after a bounded route check, close it as unresolved and Return its blocker to the parent without claiming Child or Root DONE; the parent may still have a valid route. Otherwise keep it open and surface material evidence or blockers to their owner as needed. If no Child was opened, stay in the current Frame without a synthetic Return.
+1. Establish the bounded result if any, its supported scope, and whether the Child's own DONE is met. An authorized deferral is a change of immediate focus, not evidence of Child completion. A result is candidate material, not parent acceptance.
+2. If a Child exists, choose the applicable disposition:
+   - **Completed:** close and Return it as completed when its bounded DONE is met.
+   - **Deferred:** if governing authority explicitly defers an unfinished Child, Return it as deferred without claiming Child DONE or inventing a blocker. Preserve its required work, relevant evidence, dependencies, owner, established blockers if any, and resumption condition in the affected parent's compact state or the governing owner's record. For nested affected Children, return from deepest to parent in order, retaining each unfinished obligation and dependent return condition. A deferred Child is no longer an open Frame; do not create a suspended-Frame registry or assume automatic resumption.
+   - **Unresolved:** if no authorized Child action with meaningful expected gain remains after a bounded route check, close it as unresolved and Return its blocker to the parent without claiming Child or Root DONE; the parent may still have a valid route.
+   - Otherwise keep it open and surface material evidence or blockers to their owner as needed.
+   If no Child was opened, stay in the current Frame without a synthetic Return.
 3. If another governing process owns what the result means, let it interpret the candidate before accepting that consequence. If it owns only the next focus, preserve its decision authority without blocking facts established within authority already held. Unavailable interpretation leaves dependent meaning unresolved.
 4. Integrate only established or owner-accepted material consequences into the affected Current State: the current Frame for inline work, or the parent after a Child Return. Preserve material qualifications, blockers, and unresolved decisions.
 5. Reconsider the affected current or parent focus. If later owner interpretation materially changes accepted state, reconsider again before dependent continuation.
-6. Resume the saved parent return point only when reconsideration leaves it valid.
+6. Resume the saved parent return point only when reconsideration leaves it valid and governing priority still selects it. A user-authorized different focus is followed only to the extent its dependencies and mandatory evidence permit; deferral never waives them.
 7. Otherwise follow the valid successor focus, revise the route within held authority, return the decision to its owner, or Close as appropriate.
 
 At a material Return or reconsideration, distinguish the bounded result from its actual effect on Root DONE, the active blocker, and the next valid focus. Repeated intermediate successes that leave a Root-relevant obligation unchanged are evidence to reconsider the focus or route before more preparatory work; they do not by themselves invalidate justified inquiry or authorize a new route.
@@ -253,7 +258,7 @@ Before claiming terminal completion, establish positive evidence that the govern
 - required integration;
 - required validation;
 - unresolved open Child work;
-- still-applicable user-requested deliverables or obligations, including ones without an open Child;
+- still-applicable user-requested deliverables or obligations, including ones without an open Child (including deferred required Child work);
 - unresolved blockers;
 - parked items whose materiality may have changed;
 - whether local success is being mistaken for Root completion.
