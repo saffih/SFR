@@ -8,7 +8,15 @@ Observe whether an actually activated SFR workstream preserves its actual Root, 
 
 This profile defines **what to observe and how to label evidence**. The SFR runtime alone remains sufficient for standalone SFR use and retains all semantic authority for attention and return. This profile neither grants tools or account permissions nor changes Root DONE, action authorization, the current focus, or SFR activation. Apply it by default only to an actually activated SFR workstream when accessible and authorized; an explicit opt-out may disable optional observation for its stated scope. Do **not** activate SFR or load this profile merely because SFR is mentioned. Companion absence does not disable the SFR core or justify a claim of observed behavior.
 
-## Sampling: nearly invisible in normal work
+## Observable decisions and evidence sampling
+
+**Visible explanatory behavior when SFR observability is ON:** The SFR runtime (not this profile) owns proactively explaining, at substantive work/decision boundaries, what it is doing, why it advances Root/focus, what evidence or uncertainty supported the choice, what changed, and what comes next. Include the consequence of material guard-based Park, Probe, Child, Return, route, blocker, handoff and Close decisions so a human can challenge drift. Visibility is deliberately greater than minimal end-state reporting, but does not require repetitive per-tool narration or private chain-of-thought.
+
+**Sampling is distinct from explanation:** This profile samples what actually happened and what was visibly communicated; it does not cause SFR to perform, justify or repeat each step. Score semantic correctness and communication sufficiency separately. A plausible explanation cannot be counted as independent behavioral proof; a missing companion is not a reason to suppress SFR's visible explanation.
+
+A scoped observability opt-out suppresses optional explanatory frequency and sampling, but user-requested status, material owner decisions, required protections and verification remain in force under the runtime.
+
+## Sampling: decision-relevant, without log or status churn
 
 Observe only decision-relevant boundaries that actually occur:
 - **Activation/recovery:** valid SFR activation (explicit request or authorized host binding) and actual source binding; initial Root, DONE, active Frame and focus recoverable.
@@ -16,7 +24,7 @@ Observe only decision-relevant boundaries that actually occur:
 - **Generated handoff:** handoff prompt created for the same workstream versus a distinct bounded delegate; current frontier and receiver activation instructions.
 - **Receiver continuation:** a *separate real invocation* receives an unedited handoff and independently binds its source, Root, active Frame/return chain, completed work and first valid action.
 - **Contradiction or miss:** drift, stale or invalid source, lost activation, wrong return, dropped pending user deliverable despite a correct Frame path, repeated settled work, unjustified Close, or excessive tracking burden.
-- **Human visibility (when sampled):** for substantial starts/recoveries, did the user receive a correct compact Root/Frame-path/focus/next-action orientation? For material work and Frame changes, were the actual action, reason, finding and consequence communicated without redundant tool-by-tool narration? Inspect the user-visible record, not an assistant's claim of having communicated. Score **communication sufficiency separately from semantic SFR correctness**; a polished status display alone is not proof that the correct frontier was maintained.
+- **Human visibility (when sampled):** with observability ON, did the user proactively receive at substantive boundaries a correct Root/Frame-path/focus/next-action orientation, the next material action and why it serves Root, evidence/uncertainty and outcome of a material choice, and the resulting next action? Were guard-based Park/Probe/Child/Return/route/blocker decisions explainable without redundant tool-by-tool narration? With observability OFF, were optional explanations suppressed without losing required decisions or status? Inspect the visible record, not an assistant's claim. Score **communication sufficiency separately from semantic SFR correctness**; a polished status display alone is not proof that the correct frontier was maintained.
 
 Do not insert observation checkpoints into every message or use tracking to create an SFR Child. No sampling or automation is implied for workstreams/chats the observer cannot actually access. When an observation opportunity occurs but logging is unavailable, keep work moving; give a compact optional observation only where it is useful and truthful.
 
