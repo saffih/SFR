@@ -6,6 +6,16 @@ SFR is a lightweight attention-continuity runtime for substantial AI work.
 
 Its job is simple: keep work attached to the Root obligation while attention changes, so necessary reasoning can move elsewhere and return without accidental drift.
 
+## Why SFR exists
+
+AI agents may solve individual problems well yet lose track of the larger job during extended work. They can follow an interesting detour, forget an accepted commitment, repeat preparation that no longer helps, or fail to return after an interruption. The challenge is not always insufficient intelligence; it can be unreliable direction of that intelligence over time.
+
+A rough analogy is **executive-function difficulties sometimes associated with ADHD**: sustaining a goal, managing distractions, keeping obligations in mind, and returning to an intended activity. This is an explanatory analogy, not a claim that AI agents have ADHD or that SFR works like medication.
+
+**SFR is an engineering approach intended to remedy these AI-workflow failures.** Its lightweight guards are designed to preserve the governing objective and accepted obligations, allow justified detours, bring unfinished work back into focus, and prevent unsupported claims of completion.
+
+SFR does not add intelligence, independently enforce behavior, provide a planner or memory store, or guarantee recovery when required context is unavailable. Its added effectiveness over native goal features has not yet been established by independent comparative tests.
+
 ## Install — choose an activation mode
 
 SFR has **one runtime**, [`sfr.md`](sfr.md), and two optional ways to activate it. Choose **one** in each persistent instruction scope; do not stack conflicting activation bindings.
